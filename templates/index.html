@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<nav>
+    <div class="logo">AI Study Assistant</div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+
+    <h1>Study Smarter with AI</h1>
+
+    <p>
+        Upload your notes, generate AI summaries,
+        create quizzes and prepare for exams faster.
+    </p>
+
+    <div class="buttons">
+        <a href="/register">
+            <button>Get Started</button>
+        </a>
+
+        <a href="/login">
+            <button class="secondary">Login</button>
+        </a>
+    </div>
+
+</section>
+
+</body>
+</html>

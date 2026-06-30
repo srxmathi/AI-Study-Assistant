@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>AI Summary</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<h1>🤖 AI Study Assistant</h1>
+
+<h2>{{ filename }}</h2>
+
+<div class="card">
+
+<pre style="white-space: pre-wrap; font-size:16px;">
+{{ summary }}
+</pre>
+
+</div>
+
+<br>
+
+<a href="/dashboard">
+<button>Back to Dashboard</button>
+</a>
+
+</div>
+
+</body>
+</html>
