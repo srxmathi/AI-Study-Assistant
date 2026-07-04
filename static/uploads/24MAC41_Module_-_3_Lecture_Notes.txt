@@ -1,0 +1,820 @@
+Discrete Mathematics and Graph Theory 
+(24MAC41) 
+(Common to AIM, CDS & CSE)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Module – 3 
+The Principle of Inclusion and 
+Exclusion 
+Topics: 
+1. The Principle of Inclusion and Exclusion 
+2. Generalization of the Principle 
+3. Derangements – Nothing is in its Right Place 
+4. Rook Polynomials. 
+5. Recurrence Relations Module – 3: The Principle of Inclusion and Exclusion                                     24MAC41  
+Discrete Mathematics and Graph Theory  (24MAC41) 
+ Module -3 
+ 
+ The Principle of Inclusion and Exclusion  
+Introduction: - 
+ The Principle of Inclusion and Exclusion (PIE)  is a counting technique used in 
+Combinatorics , a branch of Mathematics . It helps determine the number of elements in the union 
+of multiple sets by correcting for elements that may be counted more than once.  
+When counting items that belong to two or more overlapping groups , simply adding the sizes of 
+the groups can lead to double counting . The Principle of Inclusion and Exclusion solves this 
+problem by:  
+1. Including  the sizes of individual sets.  
+2. Excluding  the sizes of their overlaps.  
+3. Adding back  overlaps of three sets, and continuing this pattern if more sets exist.  
+Core Concepts and Key Takeaways  
+1. Avoiding Double Counting  
+When counting elements that belong to multiple sets, some elements may appear in more 
+than one set. The principle corrects this overcounting . 
+2. Inclusion Step  
+First, include (add) the number of elements in each individual set.  
+3. Exclusion Step  
+Subtract the num ber of elements that appear in the intersection of sets  because they were 
+counted more than once.  
+4. Alternating Addition and Subtraction  
+For three or more sets, the process continues by alternating subtraction and addition  of 
+intersections:  Module – 3: The Principle of Inclusion and Exclusion                                     24MAC41  
+Discrete Mathematics and Graph Theory  (24MAC41) 
+  
+o Subtract pairwis e intersections  
+o Add intersections of three sets  
+o Subtract intersections of four sets, and so on.  
+5. Union of Sets  
+The principle ultimately helps calculate the  total number of distinct elements in the union of 
+sets. 
+Key Take aways  
+ The Principle of Inclusion and Exclusion  is a systematic counting method  used when sets 
+overlap . 
+ It ensures  each element is counted exactly once . 
+ The formula involves  adding individual sets and subtracting their overlaps . 
+ The method works  for two sets, three sets, or even many sets . 
+ It is widely used in  counting problems, probability, computer science, and logic -based 
+calculations . 
+Key Challenges  
+1. Identifying sets  
+First, clearly define the sets involved in the problem . 
+Each set represents a group of elements with a specific property.  
+Counting In dividual Sets  
+Calculate the number of elements in each set separately . 
+This step gives the initial counts before considering overlaps.  
+. 
+Finding Intersections  
+Determine the number of elements common to two or more sets  (intersections).  
+These intersections represent elements counted multiple times.  Module – 3: The Principle of Inclusion and Exclusion                                     24MAC41  
+Discrete Mathematics and Graph Theory  (24MAC41) 
+ 4. Applying the Inclusion –Exclusion Formula  
+ 
+Use the formula to combine the counts correctly:  
+Add the sizes of individual sets  
+Subtract  pairwise intersections  
+Add triple intersections (if three sets exist)  
+Continue the 
+ alternating addition and subtract ion pattern  for more sets.  
+5. Using Venn Diagrams  
+Drawing 
+ Venn diagrams  can help visualize overlapping regions and understand how elements are 
+counted.  
+6. Breaking Complex Problems into Steps  
+For problems involving many conditions, divide them into 
+ smaller sets and intersec tions  before 
+applying the formula.  
+Key Challenges  
+1. Identifying All Relevant Sets  
+One of the main difficulties is 
+ correctly identifying the sets involved  in a problem. Missing a set or 
+defining it incorrectly can lead to wrong results.  
+2. Determining Accurate Intersections  
+Finding the 
+ exact number of elements in intersections  can be complicated, especially when 
+multiple conditions overlap.  
+Applications  
+1. Counting Problems  
+The principle is widely used to count the number of elements in overlapping sets  without double 
+counting.  
+2. Probability Calculations  
+In Probability Theory , it helps calculate the probability of events when multiple events overlap . Module – 3: The Principle of Inclusion and Exclusion                                     24MAC41  
+Discrete Mathematics and Graph Theory  (24MAC41) 
+  
+3. Survey and Data Analysis  
+It is used to analyse survey data , such as finding how many people like one or more products, 
+subjects, or activities when preferences overlap.  
+ 
+Common Numerical Methods  
+1. Two -Set Method  
+This is the simplest method used when only two sets  are involved.  
+Formula:  
+∣A∪B∣=∣A∣+∣B∣−∣A∩B∣|A \cup B| = |A| + |B| - ∣A∪B∣=∣A∣+∣B∣−∣A∩B∣  
+It helps find the total number of elements in either set A or B . 
+ 
+2. Three -Set Method  
+Used when three sets overlap . 
+This method ensures elements appearing in multiple sets are counted only once . 
+ 
+3. Complement Method  
+Sometimes it is easier to calculate the total number of elements not satisfying certain conditions  
+and subtract from the total.  
+ 
+ 
+ 
+ 
+ 
+ Module – 3: The Principle of Inclusion and Exclusion                                     24MAC41  
+Discrete Mathematics and Graph Theory  (24MAC41) 
+  
+Questions  
+1. Among the students in a hostel,12 study mathematics (A), 20 study physics (B), 20 study 
+chemistry (C) and 8 study biology (D).There are 5 students for A and B, 7 students for A and 
+C, 4 students for A and D, 16 students for C and B, 4 students for B and D, 3 stu dents for C 
+and D, There are 3 students for A, B and C, 2  for A,B and D, 2 for B,C and D, 3 for A,C and 
+D. Finally there are 2 who study all of these subjects. Furthermore, there are 71 students who 
+do not study any of these subjects. Find the total numbe r of students in the hostel.  
+Solution:  
+Given  
+∣A∣=12, ∣B∣= 20, ∣C∣=20, ∣D∣= 8,  
+∣A∩B∣=5, ∣A∩C∣=7, ∣A∩D∣=4,  
+∣B∩C∣=16, ∣B∩D∣=4, ∣C∩D∣=3,  
+∣ A∩B∩C∣=3, ∣ A∩B∩D∣=2, ∣ B∩C∩D∣=2, ∣ A∩C∩D∣=3 
+∣ A∩B∩C∩D ∣=2, |𝐴  ̅̅̅∩ 𝐵 ̅ ∩ 𝐶  ̅̅̅ ∩ 𝐷  ̅̅̅̅|=71 
+Let us find ∣S∣, where S is the set of all students in the hostel.  
+So, 71= ∣S∣- (12+20+20+8 ) +( 5+7+4+16+4+3 )- (3+2+2+3 ) +2 
+ = ∣S∣-29 
+        ∣S∣= 100  
+ 
+2. Out of 30 students in a hostel, 15 study history, 8 study economics and 6 study geography.it 
+is known that 3 students all of these subjects. Show that 7 or more students study none of 
+the subjects.  
+Solution:  
+ Let S is the set of all students in the hostel, and let 𝐴1,𝐴2,𝐴3 be the set of students who 
+study history, economics and geography respectively. So, we have,  
+|𝑆1|= ∑|𝐴1|=15+8+6=29, |𝑆3|= |𝐴1∩𝐴2∩𝐴3|=3 Module – 3: The Principle of Inclusion and Exclusion                                     24MAC41  
+Discrete Mathematics and Graph Theory  (24MAC41) 
+ 
+ 
+ 
+The number of students who do not any of 3 subjects is  
+|
+  𝐴1̅̅̅∩𝐴̅2∩𝐴̅3|=𝑆− 𝑆1+𝑆2−𝑆3=30-29+ 𝑆2−3=𝑆2−2  where 𝑆2= ∑|𝐴𝑖 ∩  𝐴𝑗|, 
+|
+ Note that {𝐴1∩𝐴2∩𝐴3}| is a subset of (𝐴𝑖 ∩  𝐴𝑗) for i.j = 1,2,3  
+Therefore 𝑆2= ∑|𝐴𝑖 ∩  𝐴𝑗|≥3 |𝐴1∩𝐴2∩𝐴3|=9
+ 
+Using this we note that |𝐴1̅̅̅∩𝐴̅2∩𝐴̅3|≥9−2=7 
+ 
+This proves the result .  
+ 
+3. Determine the number of positive integers n such that 𝟏≤𝒏≤𝟏𝟎𝟎 and n is not divis ible 
+by 2, 3, or 5.  
+Solution : 
+ Let 𝑆={1,2,3,…100 } ,then  ∣S∣= 100. Let 𝐴1,𝐴2,𝐴3 be the subsets of S whose elements 
+are divisible by 2,3,5 respectively. Let us find |𝐴1̅̅̅∩𝐴̅2∩𝐴̅3| 
+We note that  
+ |𝐴1 |= No of elements in S that are divisible by 2  
+  = 100/2=50  
+ |𝐴2 |= No of elements in S that are divisible by 3  
+  = 100/3=33.3=33  
+ |𝐴3 |= No of elements in S that are divisible by 5  
+  = 100/5=20  
+ |𝐴1 ∩  𝐴2|= No of elements in S that are divisible by 2 and 3  
+  = 100/6=16  
+  
+ Module – 3: The Principle of Inclusion and Exclusion                                     24MAC41  
+Discrete Mathematics and Graph Theory  (24MAC41) 
+  
+|𝐴2 ∩  𝐴3|= No of elements in S that are divisible by 3 and 5  
+  = 100/15=6  
+ |𝐴1 ∩  𝐴3|= No of elements in S that are  divisible by 2 and 5  
+  = 100/ 10=10 
+ |𝐴1 ∩  𝐴2 ∩  𝐴3|= No of elements in S that are divisible by 2 , 3 and 5  
+  = 100/30=3  
+So, |𝐴1̅̅̅∩𝐴̅2∩𝐴̅3|= |𝑆 |-|𝐴1 |+|𝐴2 |+ |𝐴3 |+|𝐴1 ∩  𝐴2|+|𝐴2 ∩  𝐴3|+|𝐴1 ∩  𝐴3|−
+|𝐴1 ∩  𝐴2 ∩  𝐴3| 
+    = 100 -(50+33+20) + (16+10+6) -3 
+    = 26 
+4. How many integers between 1 and 300(inclusive) are divisible by atleast one of 5,6,8?  
+Solution : 
+ Let  |𝑆 |=300 ,  
+ Let 𝐴1,𝐴2,𝐴3 be the subsets of S whose elements are divisible by 5,6,8 respectively  
+The number of elements of S that are are divisible by atleast one of 5,6,8 i s |𝐴1 ∪  𝐴2 ∪  𝐴3| 
+ So, |𝐴1 ∪  𝐴2 ∪  𝐴3|= |𝐴1 |+|𝐴2 |+ |𝐴3 |-|𝐴1 ∩  𝐴2|+|𝐴2 ∩  𝐴3|+|𝐴1 ∩  𝐴3|−
+                 |𝐴1 ∩  𝐴2 ∩  𝐴3| 
+Now , |𝐴1 |=300
+5=60,  |𝐴2 |=300
+6=50,|𝐴3 |=300
+8=37 
+ |𝐴1 ∩  𝐴2|=300
+30=10,|𝐴1 ∩  𝐴3|=300
+40=7,|𝐴2 ∩  𝐴3|=300
+24=12  
+           ( 𝐿𝐶𝑀𝑜𝑓  6 𝑎𝑛𝑑  8 𝑖𝑠 24) 
+            |𝐴1 ∩  𝐴2 ∩  𝐴3|=300
+120=2  ( 𝐿𝐶𝑀𝑜𝑓  5,6 𝑎𝑛𝑑  8 𝑖𝑠 120 ) 
+             |𝐴1 ∪  𝐴2 ∪  𝐴3|=120 
+ 
+ 
+ Module – 3: The Principle of Inclusion and Exclusion                                     24MAC41  
+Discrete Mathematics and Graph Theory  (24MAC41) 
+  
+5.How many integers between 1 and 300(inclusive) are divisible by none of 5,6,8?  
+Solution  
+Let  |𝑆 |=300 ,  
+ Let 𝐴1,𝐴2,𝐴3 be the subsets of S whose elements are divisible by 5,6,8 respectively  
+The number of elements of S that are are divisible by atleast one of 5,6,8 is |𝐴1 ∪  𝐴2 ∪  𝐴3| 
+ So, |𝐴1 ∪  𝐴2 ∪  𝐴3|= |𝐴1 |+|𝐴2 |+ |𝐴3 |-|𝐴1 ∩  𝐴2|+|𝐴2 ∩  𝐴3|+|𝐴1 ∩  𝐴3|−
+                 |𝐴1 ∩  𝐴2 ∩  𝐴3| 
+        Now , |𝐴1 |=300
+5=60,  |𝐴2 |=300
+6=50,|𝐴3 |=300
+8=37 
+ |𝐴1 ∩  𝐴2|=300
+30=10,|𝐴1 ∩  𝐴3|=300
+40=7,|𝐴2 ∩  𝐴3|=300
+24=12  
+           ( 𝐿𝐶𝑀𝑜𝑓  6 𝑎𝑛𝑑  8 𝑖𝑠 24) 
+             
+|𝐴1 ∩  𝐴2 ∩  𝐴3|=300
+120=2  ( 𝐿𝐶𝑀𝑜𝑓  5,6 𝑎𝑛𝑑  8 𝑖𝑠 120 ) 
+             |𝐴1 ∪  𝐴2 ∪  𝐴3|=120 
+The number of integers between 1 and 300(inclusive) are divisible by none of 5,6, 8 is  
+|𝐴1̅̅̅∩𝐴̅2∩𝐴̅3|= |𝑆 |-  |𝐴1 ∪  𝐴2 ∪  𝐴3|=300 −120 =180 
+ 
+6.How many ways 5 number of a ’s, 4 number of b ’s, 3 number of c ’s can be arranged so that 
+all the identical letters are not in single block ?  
+Solution  
+ The letters are 5+4+3= 12.  
+ Let S be the set of all permutations of these letters, |𝑆 |= 12!
+5!3!4! 
+Let 𝐴1,𝐴2,𝐴3 be the set of arrangements of the letters where the 5 a ’s,  4b ’s , 3c ’s in the single 
+block.  
+             |𝐴1 |= 8!
+3!4! , |𝐴2 |= 9!
+3!5! , |𝐴3 |= 10!
+5!4! , 
+|𝐴1 ∩  𝐴2 |= 5!
+3! , |𝐴1 ∩  𝐴3 |= 6!
+4! , |𝐴1 ∩  𝐴2 |= 7!
+5! , |𝐴1 ∩  𝐴2 ∩  𝐴3|=3! Module – 3: The Principle of Inclusion and Exclusion                                     24MAC41  
+Discrete Mathematics and Graph Theory  (24MAC41) 
+  
+ 
+So, The number of arrangements is ,  
+|𝐴1̅̅̅∩𝐴̅2∩𝐴̅3|= |𝑆 |-|𝐴1 |+|𝐴2 |+ |𝐴3 |+|𝐴1 ∩  𝐴2|+|𝐴2 ∩  𝐴3|+|𝐴1 ∩  𝐴3|−
+|𝐴1 ∩  𝐴2 ∩  𝐴3| 
+         = 25762   
+ 
+7.In how many ways can the 26 letters of the English alphabet be permuted so that none of  
+the patters CAR, DOG, PUN or BYTE occurs?  
+Solution :  
+ Let S denote the set of all permutations of 26 letters, |𝑆 |=26 
+Let 𝐴1,𝐴2,𝐴3,𝐴4 be the set of all permutations which contain CAR, DOG, PUN or BYTE occurs  
+             |𝐴1 |= 24! , |𝐴2 |= 24!  , |𝐴3 |= 24!, |𝐴4 |= 23!, 
+Now  
+|𝐴1 ∩  𝐴2 |=|𝐴1 ∩  𝐴3 |=  |𝐴1 ∩  𝐴2 |=(26−6+2)!=22! 
+|𝐴1 ∩  𝐴4 |=|𝐴2 ∩  𝐴4 |=  |𝐴3 ∩  𝐴4 |=(26−7+2)!=21!  
+|𝐴1 ∩  𝐴2 ∩  𝐴3|= (26 -9+3)! = 20!  
+|𝐴1 ∩  𝐴2 ∩  𝐴4|=|𝐴1 ∩  𝐴3 ∩  𝐴4|=|𝐴2 ∩  𝐴3 ∩  𝐴4|=(26-10+3)!= 19!  
+|𝐴1 ∩  𝐴2 ∩   𝐴3  ∩𝐴4|=(26−13+4)=17! 
+Therefore the required number of permutations is  
+|𝐴1̅̅̅∩𝐴̅2∩𝐴̅3 ∩𝐴̅4|= 26−(3(24!)+23)+(3(22!)+3(21!))−(20!+3(19!)+17!) 
+ 
+ 
+ 
+ 
+ 
+ Module – 3: The Principle of Inclusion and Exclusion                                     24MAC41  
+Discrete Mathematics and Graph Theory  (24MAC41) 
+  
+ 
+8. In how many ways can one arrange the letters in the word CORRESPONDENTS so that 
+there is no pair of consecutive identical letters?  
+Solution:  
+ Here C,  P, D and T occurs one time and O,  R, E, S, N occurs 2 times.  
+Let S be the set of all permutations of these 14 letters, we have  |𝑆 |=14!
+(2!)5 
+Let 𝐴1,𝐴2,𝐴3,𝐴4,𝐴5 be the sets of all permutations which contain O, R, E, S, N appears  
+|𝐴𝑖|=13!
+(2!)4 
+|𝐴𝑖 ∩  𝐴𝑗 |=12!
+(2!)3,  |𝐴𝑖 ∩  𝐴𝑗 ∩  𝐴𝑘|= 11!
+(2!)2,   
+|𝐴𝑖 ∩  𝐴𝑗 ∩  𝐴𝑘 ∩  𝐴𝑝 |= 10!
+(2!).,   
+|𝐴1 ∩  𝐴2 ∩   𝐴3  ∩𝐴4 ∩𝐴5|=9! 
+From these, we get  
+ |𝑆0 |=14!
+(2!)5,    |𝑆1 |=𝐶(5,1)×13!
+(2!)4 
+|𝑆2 |=𝐶(5,2)×12!
+(2!)3,   |𝑆3 |=𝐶(5,3)×11!
+(2!)2,   
+|𝑆4 |=𝐶(5,4)×10!
+(2!).,  |𝑆5 |=𝐶(5,5)×9! 
+So, There is no pair of consecutive identical letters is  
+𝐸0 = 𝑆0− 𝐶(1,1)𝑆1+ 𝐶(2,2)𝑆2− 𝐶(3,3)𝑆3+𝐶(4,4)𝑆4−𝐶(5,5)𝑆5 
+      =  14!
+(2!)5,   − 𝐶(5,1)×13!
+(2!)4+ 𝐶(5,2)×12!
+(2!)3− 𝐶(5,3)×11!
+(2!)2+ 𝐶(5,4)×10!
+(2!).− 𝐶(5,5)×9! 
+, 
+ 
+ 
+ 
+ Module – 3: The Principle of Inclusion and Exclusion                                     24MAC41  
+Discrete Mathematics and Graph Theory  (24MAC41) 
+  
+ 
+9. In how many  ways can one arrange the letters in the word CORRESPONDENTS so that 
+there is exactly two pair of consecutive identical letters?  
+Solution:  
+Here C,P,D and T occurs one time and O,R,E,S,N occurs 2 times.  
+Let S be the set of all permutations of these 14 lette rs, we have  |𝑆 |=14!
+(2!)5 
+Let 𝐴1,𝐴2,𝐴3,𝐴4,𝐴5 be the sets of all permutations which contain O,R,E,S,N appears  
+|𝐴𝑖|=13!
+(2!)4 
+|𝐴𝑖 ∩  𝐴𝑗 |=12!
+(2!)3,  |𝐴𝑖 ∩  𝐴𝑗 ∩  𝐴𝑘|= 11!
+(2!)2, 
+|𝐴𝑖 ∩  𝐴𝑗 ∩  𝐴𝑘 ∩  𝐴𝑝 |= 10!
+(2!).,   
+|𝐴1 ∩  𝐴2 ∩   𝐴3  ∩𝐴4 ∩𝐴5|=9! 
+From these, we get  
+ |𝑆0 |=14!
+(2!)5,    |𝑆1 |=𝐶(5,1)×13!
+(2!)4 
+|𝑆2 |=𝐶(5,2)×12!
+(2!)3,   |𝑆3 |=𝐶(5,3)×11!
+(2!)2,   
+|𝑆4 |=𝐶(5,4)×10!
+(2!).,  |𝑆5 |=𝐶(5,5)×9! 
+So, there is exactly t wo pair of consecutive identical letters  is 
+𝐸2 = 𝑆2− 𝐶(3,1)𝑆3+𝐶(4,2)𝑆4−𝐶(5,3)𝑆5 
+ = 𝐶(5,2)×12!
+(2!)3−𝐶(3,1) ×𝐶(5,3)×11!
+(2!)2, + 𝐶(4,2)×𝐶(5,4)×10!
+(2!).−𝐶(5,3)× 𝐶(5,5)×9! 
+ 
+ Module -3: The Principle of Inclusion and Exclusion    24MAC41  
+Discrete Mathematics and Graph Theory (24MAC41)   
+Recurrence relations  
+Introduction  
+A first -order recurrence relation defines each term of a sequence, 𝑎𝑛, based on the immediately preceding 
+term,  𝑎𝑛−1. Common types include  linear, non -homogeneous, and population models, typically structured as 
+𝑎𝑛=𝐴𝑎 𝑛−1+C (where A, C constants).These are essential for modelling iterative processes like compound 
+interest, population growth, or computer algorithms.   
+Second -order recurrence relations define each term  𝑎𝑛, based on the two preceding terms, 𝑎𝑛−1 and 𝑎𝑛−2. In 
+general, second -order recurrence relations can be written as 𝑎𝑛=A𝑎𝑛−1+B𝑎𝑛−2+𝑓(𝑛) (where A, B 
+constants, f(n) is a function).  
+Applications  
+Recurrence relations are used  to model problems where the solution to a larger problem depends on solutions 
+to smaller, similar subproblems, finding major applications in computer science for algorithm analysis (like 
+merge sort), combinatorics for counting  problems (Fibonacci, Tower of Hanoi), and modelling dynamic 
+systems in engineering, finance, and biology (e.g., population growth, orbital mechanics), allowing complex 
+tasks to be broken down into iterative, manageable steps.  
+Physics & Aerospace : Modelling satellite trajectories or dynamic systems under periodic forces.  
+Finance : Predicting trends, option pricing, and modelling stock market behaviour.  
+Biology : Modelling population dynamics and disease spread.  
+Signal Processing : Analysing time -series data in biomedical engineering (EEG, ECG).  
+Sequences : Defining and finding terms in series like Fibonacci numbers or Catalan numbers.  
+First order recurrence relations  
+First-order linear recurrence relations with constant coefficients take the form 𝑎𝑛=𝑐 𝑎𝑛−1+f(n), where  c is 
+a constant and f(n) is a function.  They define a sequence where each term depends only on the immediate 
+predecessor. If f(n)=0 then 𝑎𝑛=𝑐 𝑎𝑛−1is homogeneous , otherwise it is  non-homogeneous . 
+ 
+ 
+ 
+ 
+ Module -3: The Principle of Inclusion and Exclusion    24MAC41  
+Discrete Mathematics and Graph Theory (24MAC41)   
+1. Solve the recurrence relation 𝒂𝒏=𝟐𝒂 𝒏−𝟏, with 𝒂𝟎=𝟑. 
+Solution:  
+By data 𝑎0=3 
+Given 𝑎𝑛=2 𝑎𝑛−1 (first -order linear homogeneous recurrence relation)   
+Comparing with 𝑎𝑛=𝑟.𝑎𝑛−1, we get 𝑟=2 
+The general solution is of the form 𝑎𝑛=𝑐.𝑟𝑛 
+Substitute 𝑟=2⟹𝑎𝑛=𝑐.2𝑛 ………. (1)  
+Using the condition 𝑎0=3 in (1) 
+(1) ⟹𝑎0=𝑐.20 (or)  3=𝑐 
+∴ the general solution 𝑎𝑛=3.2𝑛 
+2. Solve the recurrence relation 𝒂𝒏=𝟑𝒂 𝒏−𝟏, with 𝒂𝟎=𝟐. 
+Solution:  
+By data 𝑎0=2 
+Given 𝑎𝑛=3 𝑎𝑛−1 (first -order linear homogeneous recurrence relation)   
+Comparing with 𝑎𝑛=𝑟.𝑎𝑛−1, we get 𝑟=3 
+The general solution is of the form 𝑎𝑛=𝑐.𝑟𝑛 
+Substitute 𝑟=3⟹𝑎𝑛=𝑐.3𝑛 ………. (1)  
+Using the condition 𝑎0=2 in (1) 
+(1) ⟹𝑎0=𝑐.20 (or)  2=𝑐 
+∴ the general solution 𝑎𝑛=2.3𝑛 
+ 
+ 
+ 
+ 
+ 
+ 
+ Module -3: The Principle of Inclusion and Exclusion    24MAC41  
+Discrete Mathematics and Graph Theory (24MAC41)   
+3. Solve the recurrence relation 𝒂𝒏=𝟕𝒂 𝒏−𝟏, where 𝒏≥𝟏, given 𝒂𝟐=𝟗𝟖. 
+Solution:  
+By data  𝒂𝟐=𝟗𝟖 
+The given relation may be rewritten 𝑎𝑛+1=7𝑎𝑛, for 𝑛≥0.  
+The general solution is of the form 𝑎𝑛=𝑐.7𝑛…….(1) (∵ 𝑟=3) 
+Using the condition 𝑎2=98 in (1) 
+(1) ⟹𝑎2=98=𝑐.72 (or)  𝑐=98
+49=2 
+∴ the general solution 𝑎𝑛=2.7𝑛 
+4. The number of virus -affected files in a system is 1000 (to start with) and this increases 250% every 
+two hours. Use a recurrence relation to determine the number of viruses affected files in the system 
+after one day.  
+Solution:  
+In the beginning, the number of virus -affected files is 1000. Let us denote this by 𝑎0. 
+Let 𝑎𝑛 denote the number of virus -affected files after 24 hours. Then the number increases by 𝑎𝑛 × 250/100, in 
+the next two hours. Thus, after 2n + 2 hours, the number is  
+   𝑎𝑛+1=𝑎𝑛+𝑎𝑛(250
+100)=𝑎𝑛(1+2.5)=𝑎𝑛(3.5) 
+This is the recurrence relation for the number of virus -affected files.  
+ 
+The general solution is of the form 𝑎𝑛=𝑐.(3.5)𝑛 ……. (1)  
+Using the condition 𝑎0=1000  in (1), we get 𝑐=1000  
+∴ the general solution 𝑎𝑛=1000  (3.5)𝑛 
+   This gives the number of viruses affected files after 24 hours. From this, we get (for n =12)  
+   𝑎12=1000  (3.5)12=3379220508  
+  This is the number of viruses affected files after one day (24 hours).  
+ 
+ 
+ 
+ Module -3: The Principle of Inclusion and Exclusion    24MAC41  
+Discrete Mathematics and Graph Theory (24MAC41)   
+5. Suppose that a person deposits $ 10000 in a savings account at a bank yielding 11% per year with   
+interest compounded annually.  Model the recurrence relation for this case and hence find how much 
+amount will be in the account after 30 years?  
+Solution:  
+The person deposits $ 10000 in a savings account. Let us denote this by 𝑎0. Then  
+   𝑎𝑛+1=𝑎𝑛+𝑎𝑛(11
+100) 
+          =𝑎𝑛(1+0.11)=𝑎𝑛(1.11) 
+This is the recurrence relation for this case.  
+Solving this relation, we get  
+   𝑎𝑛=𝑎0(1.11)𝑛=10000 ×(1.11)𝑛 
+ To find how much amount will be in the account after 30 years, we take n=30  
+   𝑎30=10000 ×(1.11)30= $228922 .96 
+Second order recurrence relations  
+A second -order recurrence relation  expresses the next term in a sequence as a function of the two preceding 
+terms, generally written as  𝑎𝑛=𝑐1 𝑎𝑛−1+𝑐2 𝑎𝑛−2+f(n), where  𝑐1 and 𝑐2 are constants and f(n) is a 
+function.  If f(n)=0 then  𝑎𝑛=𝑐1 𝑎𝑛−1+𝑐2 𝑎𝑛−2 is homogeneous  Recurrence relation, which can be 
+solved using the characteristic equation 𝑟2−𝑐1𝑟−𝑐2=0 to find a closed -form formula based on the 
+roots  𝑟1 and 𝑟2. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Module -3: The Principle of Inclusion and Exclusion    24MAC41  
+Discrete Mathematics and Graph Theory (24MAC41)   
+6. Solve the recurrence relation 𝒂𝒏=𝟓𝒂 𝒏−𝟏−𝟔𝒂 𝒏−𝟐 with the initial conditions 𝒂𝟎=𝟏,𝒂𝟏=𝟎. 
+Solution:  
+Given  recurrence relation 𝑎𝑛−5 𝑎𝑛−1+6 𝑎𝑛−2=0 (homogeneous)……… (1)  
+Let 𝑎𝑛=𝒓𝒏 
+Using in (1) ⟹𝑟𝑛−5 𝑟𝑛−1+6 𝑟𝑛−2=0 
+Divide by  𝑟𝑛−2 
+   ⟹𝑟2−5 𝑟+6=0 (characteristic equation)  
+Solving, we get 𝑟=2,3 (the roots are real and distinct)  
+General solution  
+   ∴𝑎𝑛=𝐴.2𝑛+𝐵.3𝑛 ……… (2)  
+To find 𝐴,𝐵 
+Using  𝑎0=1 in (2) ⟹1=𝐴.20+𝐵.30 
+(or)  𝐴+𝐵=1     ……… (3)  
+Using  𝑎1=0 in (2) ⟹0=𝐴.21+𝐵.31 
+(or)  2𝐴+3𝐵=0  ……… (4)  
+Solving (3) & (4), we get 𝐴=3,𝐵=−2. 
+Solution  
+  ∴𝑎𝑛=3.𝟐𝒏+(−𝟐).𝟑𝒏  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Module -3: The Principle of Inclusion and Exclusion    24MAC41  
+Discrete Mathematics and Graph Theory (24MAC41)   
+7. Solve the recurrence relation 𝒂𝒏=𝟔𝒂 𝒏−𝟏−𝟗𝒂 𝒏−𝟐 with the initial conditions 𝒂𝟎=𝟏,𝒂𝟏=𝟒. 
+Solution:  
+Given  recurrence relation 𝑎𝑛−6 𝑎𝑛−1+9 𝑎𝑛−2=0 ……… (1)  
+Let 𝑎𝑛=𝒓𝒏 
+Using in (1) ⟹𝑟𝑛−6 𝑟𝑛−1+9 𝑟𝑛−2=0 
+Divide by  𝑟𝑛−2 
+   ⟹𝑟2−6 𝑟+9=0 (characteristic equation)  
+Solving, we get 𝑟=3,3 (the roots are real and equal)  
+General solution  
+  ∴𝑎𝑛=(𝐴+𝐵𝑛) 3𝑛 ……… (2)  
+To find 𝐴,𝐵 
+  Using initial condition  𝑎0=1 in (2) ⟹1=(𝐴+𝐵.0) 30 
+   ⟹  𝐴=1      
+Using  𝑎1=4 in (2) ⟹4=(𝐴+𝐵.1) 31 
+(or)  3𝐴+3𝐵=4  
+Using 𝐴=1⟹ 𝐵=1
+3 
+Solution  
+   ∴𝑎𝑛=(1+1
+3 𝑛) 3𝑛  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Module -3: The Principle of Inclusion and Exclusion    24MAC41  
+Discrete Mathematics and Graph Theory (24MAC41)   
+8. Solve the recurrence relation 𝒂𝒏+𝟐𝟐−𝟓𝒂𝒏+𝟏𝟐+𝟔𝒂𝒏𝟐=𝟎 for 𝒏≥𝟎, given 𝒂𝟎=𝒂𝟏= 1. 
+Solution:  
+Put 𝑎𝑛2=𝑏𝑛 then the recurrence relation becomes  
+   𝑏𝑛+2−5 𝑏𝑛+1+6 𝑏𝑛=0 and initial conditions 𝒃𝟎=𝒃𝟏= 1. 
+Let 𝑏𝑛=𝒓𝒏 
+Using in (1) ⟹𝑟𝑛+2−5 𝑟𝑛+1+6 𝑟𝑛=0 
+Divide by  𝑟𝑛 
+   ⟹𝑟2−5 𝑟+6=0 (characteristic equation)  
+Solving, we get 𝑟=2,3 (the roots are real and distinct)  
+General solution  
+  ∴𝑏𝑛=𝐴.2𝑛+𝐵.3𝑛 ……… (1)  
+To find 𝐴,𝐵 
+Using  𝒃𝟎=1 in (1) ⟹1=𝐴.20+𝐵.30 
+(or)  𝐴+𝐵=1     ………..(2)  
+Using 𝒃𝟏=1 in (1) ⟹1=𝐴.21+𝐵.31 
+(or)  2𝐴+3𝐵=1  ……… (3)  
+Solving (2) & (3), we get 𝐴=2,𝐵=−1. 
+Solution  
+  ∴𝑏𝑛=𝑎𝑛2=2.𝟐𝒏+(−𝟏).𝟑𝒏  
+ 
+ 
+ 
+ 
+ 
+ 
+ Module -3: The Principle of Inclusion and Exclusion    24MAC41  
+Discrete Mathematics and Graph Theory (24MAC41)   
+9. Solve the recurrence relation 𝒂𝒏+𝟐+𝟒𝒂𝒏+𝟏 +𝟒𝒂𝒏=𝟕,  𝒏 ≥𝟎  
+Solution:  
+Given  recurrence relation 𝑎𝑛+4 𝑎𝑛−1+4 𝑎𝑛−2=7 (non-homogeneous)  ……… (1)  
+First we solve the homogeneous recurrence relation  
+Let 𝑎𝑛=𝒓𝒏 
+Using in (1) ⟹𝑟𝑛+4 𝑟𝑛−1+4 𝑟𝑛−2=0 
+Divide by  𝑟𝑛−2 
+   ⟹𝑟2+4 𝑟+4=0 (characteristic equation)  
+   Solving, we get 𝑟=−2,−2 (the roots are real and equal)  
+Complimentary Function  
+   ∴𝑎𝑛(ℎ)=(𝐴+𝐵𝑛) (−2)𝑛 ……… (2)  
+To find particular integral  
+  Since the RHS of (1) is constant, assume 𝑎𝑛(𝑝)=𝑐 
+   Substitute in (1), C + 4C + 4C = 7  
+    ⟹𝑐=7
+9 
+Particular Integral  
+  ∴𝑎𝑛(𝑝)=7
+9 
+General solution  
+   ∴𝑎𝑛=𝑎𝑛(ℎ)+𝑎𝑛(𝑝)=(𝐴+𝐵𝑛) (−2)𝑛+7
+9 
+ 
+ 
+ 
+ 
+ 
+ Module -3: The Principle of Inclusion and Exclusion    24MAC41  
+Discrete Mathematics and Graph Theory (24MAC41)   
+10. Solve the recurrence relation 𝒂𝒏=𝟑𝒂𝒏−𝟏−𝟐𝒂𝒏−𝟐 with the initial conditions 𝒂𝟏=𝟓 & 𝒂𝟐=𝟑. 
+  Solution:  
+Given  recurrence relation 𝑎𝑛−3 𝑎𝑛−1+2 𝑎𝑛−2=0 ……… (1)  
+Let 𝑎𝑛=𝒓𝒏 
+Using in (1) ⟹𝑟𝑛−3 𝑟𝑛−1+2 𝑟𝑛−2=0 
+Divide by  𝑟𝑛−2 
+   ⟹𝑟2−3 𝑟+2=0 (characteristic equation)  
+Solving, we get 𝑟=1,2 (the roots are real and distinct)  
+General solution  
+  ∴𝑎𝑛=𝐴.1𝑛+𝐵.2𝑛=𝐴+𝐵.2𝑛 ……… (2)  
+To find 𝐴,𝐵 
+Using  𝑎1=5 in (2) ⟹5=𝐴+𝐵.2 
+(or)  𝐴+2𝐵=5     ……… (3)  
+Using  𝑎2=3 in (2) ⟹3=𝐴+𝐵.4 
+(or)  𝐴+𝐵.4=3  ……… (4)  
+Solving (3) & (4), we get 𝐴=7,𝐵=−1 
+Solution  
+   ∴𝑎𝑛=7+(−𝟏).𝟐𝒏  
+ 
+ Module – 3: The Principle of Inclusion and Exclusion                                  24MAC41  
+ 
+DISCRETE MATHEMATICS AND GRAPH THEORY (24MAC41)                                                              Page 
+1 of 5 Syllabus: - 
+The principle of Inclusion and Exclusion, Generalizations of the principle , Derangements -
+Nothing is in its Right Place, Rook Polynomials. Recurrence relations: First order linear 
+recurrence relation, the second order linear homogeneous recurrence relation with constant 
+coefficients.  
+ 
+Part – A Questions  
+ 
+ The principle of Inclusion and Exclusion, Generalizations of the principle  
+1 Among the students in a hostel,12 study mathematics  (A), 20 study physics  (B), 20 study 
+chemistry (C) and 8 study biology  (D).There are 5 students for A and B, 7 students for A 
+and C, 4 students for A and D, 16 students for C and B, 4 students for B and D, 3 students 
+for C and D, There are 3 students for A,  B and C, 2  for A,B and D, 2 for B,C and D, 3 for 
+A,C and D. Finally, there are 2 who study all of these subjects. Furthermore , there are 71 
+students who do not study any of these subjects. Find the total number of students in the 
+hostel.  
+2 Out of 30 students in a hostel, 15 study history, 8 study economics and 6 study geography.it 
+is known that 3 students all of these subjects . Show that 7 or more students study none of 
+the subjects.  
+3 Determine the number of positive integers n such that 1≤𝑛≤100 and n is not divisible 
+by 2, 3, or 5.  
+4 How many integers between 1 and 300(inclusive) are divisible by atleast one of 5,6,8?  
+5 How many integers between 1 and 300(inclusive) are divisible by none of 5,6,8?  
+6 How many ways 5 number of a’s, 4 number of b’s, 3 number of c’s can be arranged so that   
+all the identical letters are not in the single book?  
+7 In how many ways can the 26 letters of the English alphabet be permuted so that none of  
+the patters CAR, DOG, PUN or BYTE occurs?  
+8 In how many  ways can one arrange the letters in the word CORRESPONDENTS so that 
+there is no pair of consecutive identical letters?  
+9  In how many  ways can one arrange the letters in the word CORRESPONDENTS so that 
+there is exactly two pairs  of consecutive identical letters?  
+ 
+ Derangements -Nothing is in its Right Place  
+10 
+ 
+ Find the number of derangements of four numbers 1, 2, 3, 4.  
+11 Evaluate d 5, d6, d7, d8. Module – 3: The Principle of Inclusion and Exclusion                                  24MAC41  
+ 
+DISCRETE MATHEMATICS AND GRAPH THEORY (24MAC41)                                                              Page 
+2 of 5 12 While at the race track, a person bets on each of the nine horses in a race to come in 
+accordance to how they are favored . In how many ways can they reach the finish line so 
+that he loses all his bets?  
+13 In how many ways can we arrange the numbers   1, 2, 3, ……, 10 so that   1 is not in the 
+first place, 2 is not in the second place, and so on, and 10 is not in the 10th place?  
+ 
+14 From the set of all permutations of n distinct objects, one permutation is choosen at random. 
+What is the probability that it is not a derangement?  
+15 There are n pairs of children’s gloves in a box. Each pair is of a different colour. Suppose 
+the right gloves are distributed at random to n children, and thereafter the left gloves are 
+also distributed to them at random. Find the probability that (i) no c hild gets a matching 
+pair, (ii) every child gets a matching pair, (iii) exactly one child gets a matching pair, (iv) 
+atleast 2 children get matching pairs.  
+16 There are eight letters to eight different people to be placed in eight different addressed 
+envelops. Find the number of ways of doing this so that atleast one letter gets to the right 
+person.  
+17 4. Each of the n students is given a book. The books are to be returned and redistributed to 
+the same students. In how many ways can the two distributions be made so that no student 
+will get the same book in both the distributions.  
+ 
+18 For the positive integers 1, 2, 3, …. n , there are 11660 derangements where 1 , 2, 3, 4, 5 
+appear in the first five positions. What is the value of n?  
+ 
+ Rook Polynomials  
+19 Find rook polynomi al 
+ 
+ 
+ 
+ 1 2 
+3 4 
+20 Find rook polynomi al 
+ 
+1 2 3 
+4  5 
+ 
+21 Find rook polynomi al 
+ 
+1 2  
+  3 
+4 5 6 
+ 
+22 Find rook polynomi al 
+ Module – 3: The Principle of Inclusion and Exclusion                                  24MAC41  
+ 
+DISCRETE MATHEMATICS AND GRAPH THEORY (24MAC41)                                                              Page 
+3 of 5 1 2 3 
+4  5 
+6 7 8 
+ 
+ 
+23 Find the Rook Polynomial for 2X2 board by expansion Formula.  
+24 Find the Rook Polynomial for the board by expansion Formula.  
+ 
+  1 
+ 2 3 
+4 5 6 
+7 8  
+   
+ 
+25 Find the Rook Polynomial for the board by Product Formula.  
+1 2    
+3 4    
+   5 6 
+   7 8 
+  9 10 11 
+ 
+ Recurrence relations: First order linear recurrence relation, the second order linear 
+homogeneous recurrence relation with constant coefficients.  
+26 Solve the recurrence relation 𝑎𝑛=2𝑎𝑛−1, with 𝑎0=3. 
+ 
+27 Solve the recurrence relation 𝑎𝑛=7𝑎𝑛−1, where 𝑛≥1, given 𝑎2=98. 
+28 The number of virus -affected files in a system is 1000 (to start with) and this increases 
+250% every two hours. Use a recurrence relation to determine the number of viruses 
+affected files in the system after one day.  
+ 
+29 Suppose that a person deposits $ 10000 in a savings account at a bank yielding 11% per 
+year with   interest compounded annually.  Model the recurrence relation for this case and 
+hence find how much amount will be in the account after 30 years?  
+30 Solve the recurrence relation 𝑎𝑛=5𝑎𝑛−1−6𝑎𝑛−2 with the initial conditions  
+  𝑎0=1,𝑎1=0. 
+31 Solve the recurrence relation 𝑎𝑛=6𝑎𝑛−1−9𝑎𝑛−2 with the initial conditions  
+𝑎0=1,𝑎1=4. 
+32 Solve the recurrence relation 𝑎𝑛+22−5𝑎𝑛+12+6𝑎𝑛2=0 for 𝑛≥0, given 𝑎0=𝑎1= 1. 
+ 
+ 
+ Module – 3: The Principle of Inclusion and Exclusion                                  24MAC41  
+ 
+DISCRETE MATHEMATICS AND GRAPH THEORY (24MAC41)                                                              Page 
+4 of 5  
+ 
+Part – B Questions  
+ 
+1 How many integers between 1 and 300 (inclusive) are divisible by none of 5,6,8?  
+ 
+2 Find the number of permutations of the digits 1 through 9 in which none of the blocks 
+23,45,678 occurs?  
+3 In how many ways can the integers 1, 2, 3, ……10 be arranged in a line so that no even 
+integer is in its natural place.  
+4 Find the number of derangements of 1, 2, 3, 4, 5, 6 where the first three numbers are 1, 2, 
+3 in some order.               
+5 Find the Rook Polynomial for the board.  
+ 
+  1 
+ 2 3 
+4 5 6 
+7 8  
+   
+ 
+6 Find the Rook Polynomial for the board by expansion Formula.  
+ 
+1  2 
+3 4 5 
+ 6  
+ 
+7 Find the Rook Polynomial for 3X3 board by expansion Formula.  
+8 Solve the recurrence relation 𝑎𝑛+2+4𝑎𝑛+1 +4𝑎𝑛=7,  𝑛 ≥0 given 𝑎0=1 and  
+𝑎1=2. 
+9 Solve the recurrence relation 𝑎𝑛=3𝑎𝑛−1, with 𝑎0=1. 
+10 Solve the recurrence relation 𝑎𝑛−𝑎𝑛−1−2𝑎𝑛−2=0 with the initial conditions 𝑎0=
+0,𝑎1=−1. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Module – 3: The Principle of Inclusion and Exclusion                                  24MAC41  
+ 
+DISCRETE MATHEMATICS AND GRAPH THEORY (24MAC41)                                                              Page 
+5 of 5  
+Part – C Questions  
+ 
+1 In how many ways can one arrange the letters in CORRESPONDENTS so  that there is 
+exactly 3 pairs of consecutive identical letters?  
+2 Find the number of permutations of the digits 1 through 9 in which none of the blocks 
+34,45,738 occurs?  
+3 In how many ways can each of 10 people select a left glove and a right glove out of a total 
+of 10 pairs of gloves so that no person selects a matching pair of gloves.  
+4 30 students take a quiz. Then for the purpose of grading, the teacher asks the students to 
+exchange papers so that no one is grading his own paper. In how many ways can this be 
+done?  
+ 
+5 Find the Rook Polynomial for the board by Product Formula.  
+1 2   
+3 4  5 
+ 6 7 8 
+ 
+6 Solve the recurrence relation 𝑎𝑛=7𝑎𝑛−1, with 𝑎0=2. 
+7 Solve the recurrence relation 𝑎𝑛=3𝑎𝑛−1, with 𝑎0=1. 
+8 Solve the recurrence relation 𝒂𝒏=𝟑𝒂 𝒏−𝟏, with 𝒂𝟎=𝟐. 
+9 Solve the recurrence relation 𝒂𝒏=𝟕𝒂 𝒏−𝟏, with 𝒂𝟎=𝟐. 
+10 Solve the recurrence relation 𝑎𝑛− 10 𝑎𝑛−1+21 𝑎𝑛−2=0 
+ 
+ 

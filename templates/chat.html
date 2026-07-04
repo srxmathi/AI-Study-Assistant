@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with PDF</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <h1>💬 Chat with your Notes</h1>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="question"
+            placeholder="Ask a question..."
+            required
+            style="width:80%; padding:12px; font-size:16px;">
+
+        <br><br>
+
+        <button type="submit">
+            Ask AI
+        </button>
+
+    </form>
+
+    {% if answer %}
+
+        <div class="card" style="margin-top:30px;">
+
+            <h2>🤖 Answer</h2>
+
+            <p style="white-space:pre-wrap;">
+                {{ answer }}
+            </p>
+
+        </div>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/dashboard">
+        <button>Back to Dashboard</button>
+    </a>
+
+</div>
+
+</body>
+</html>

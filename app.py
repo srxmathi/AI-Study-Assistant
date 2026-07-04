@@ -1,7 +1,7 @@
 
 import PyPDF2
 import os
-from gemini_helper import generate_summary
+from gemini_helper import generate_summary, ask_question
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import session
@@ -147,6 +147,18 @@ def upload():
                     if extracted:
                         text += extracted
 
+            # Save the extracted text into a .txt file
+            text_filename = filename.rsplit(".", 1)[0] + ".txt"
+            text_filepath = os.path.join(app.config["UPLOAD_FOLDER"], text_filename)
+
+            with open(text_filepath, "w", encoding="utf-8") as f:
+                f.write(text)
+
+            # Save only the text file name in the session
+            session["text_file"] = text_filename
+
+            
+
             summary = generate_summary(text)
 
             return render_template(
@@ -154,12 +166,46 @@ def upload():
                 filename=filename,
                 summary=summary
             )
+
+    return render_template("upload.html")
+
+@app.route("/chat", methods=["GET", "POST"])
+def chat():
+
+    if "user" not in session:
+        return redirect("/login")
+
+    answer = ""
+
+    if request.method == "POST":
+
+        print("Session contents:", session)
+        print("Text file:", session.get("text_file"))
+
+        question = request.form["question"]
+
+        text_file = session.get("text_file")
+
+        if text_file:
+
+            text_path = os.path.join(app.config["UPLOAD_FOLDER"], text_file)
+
+            with open(text_path, "r", encoding="utf-8") as f:
+                pdf_text = f.read()
+
+            answer = ask_question(pdf_text, question)
+
+        else:
+            answer = "Please upload a PDF first."
+
+    return render_template("chat.html", answer=answer)            
+            
     
                 
                 
             
 
-    return render_template("upload.html")
+    
 
 
 @app.route("/logout")
